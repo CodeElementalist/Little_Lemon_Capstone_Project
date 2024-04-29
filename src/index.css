@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Markazi+Text');
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,151 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav ul, footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	padding: 20px;
+}
+
+li > a {
+	display: inline-block;
+}
+
+h1 {
+	font-family: Markazi;
+	font-size: 40pt;
+}
+
+h2 {
+	font-family: Markazi;
+	font-size: 28pt;
+}
+
+p {
+	font-family: Karla;
+	font-size: 16pt;
+}
+
+img {
+	display: inline-float;
+	position: relative;
+	border-style: groove;
+	border-color: #333333;
+	border-width: medium;
+	border-radius: 2px;
+}
+
+.pcolor1 {
+	background-color: #495E57;
+}
+
+.pcolor2 {
+	background-color: #F4CE14;
+}
+
+.scolor1 {
+	background-color: #EE9972;
+}
+
+.scolor2 {
+	background-color: #FBDABB;
+}
+
+.scolor3 {
+	background-color: #EDEFEE;
+}
+
+.scolor4 {
+	background-color: #333333;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 150px 100px 1400px 350px;
+	grid-template-areas: "header" "nav" "main" "footer";
+	gap: 10px;
+}
+
+.itemHeader {
+	grid-area: header;
+}
+
+.itemNav {
+	grid-area: nav;
+}
+
+.itemMain {
+	grid-area: main;
+}
+
+.itemFooter {
+	grid-area: footer;
+}
+
+.containerFooter {
+	display: grid;
+	grid-template-columns: repeat(2, 0.7fr) repeat(3, 1fr) 0.7fr;
+	grid-template-areas: ". footerlogo footer1 footer2 footer3 .";
+}
+
+.itemFooterlogo {
+	grid-area: footerlogo;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.itemFooter1 {
+	grid-area: footer1;
+}
+
+.itemFooter2 {
+	grid-area: footer2;
+}
+
+.itemFooter3 {
+	grid-area: footer3;
+}
+
+.containerForm {
+	display: grid;
+	grid-template-columns:  repeat(4, 1fr);
+	grid-template-areas: ". date time ." ". info guest ." ". info occasion ." ". submit submit .";
+	text-align: left;
+}
+
+.itemDate {
+	grid-area: date;
+}
+
+.itemTime {
+	grid-area: time;
+}
+
+.itemInfo {
+	grid-area: info;
+}
+
+.itemGuest {
+	grid-area: guest;
+	padding-top: 60px;
+	line-height: 1.5;
+}
+
+.itemOccasion {
+	grid-area: occasion;
+}
+
+.itemSubmit {
+	grid-area: submit;
+	text-align: center;
+	padding-top: 60px;
 }
